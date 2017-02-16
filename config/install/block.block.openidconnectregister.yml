@@ -1,0 +1,26 @@
+uuid: b9b400fe-7cae-4914-a723-a494b16fc1a4
+langcode: en
+status: true
+dependencies:
+  module:
+    - pixelpin_openid_connect
+    - system
+  theme:
+    - bartik
+id: openidconnectregister
+theme: bartik
+region: content
+weight: -3
+provider: null
+plugin: pixelpin_openid_connect_login
+settings:
+  id: pixelpin_openid_connect_login
+  label: 'PixelPin OpenID Connect Register'
+  provider: pixelpin_openid_connect
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /user/register
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,23 @@
+uuid: 131bcec1-4ebe-454d-9667-2d0a3ee6e2a6
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: _q6rHthpt4EBcAbujty9Bo5S73xoNnNCn5RpOBocg5U
+id: user.field_region_pixelpin
+field_name: field_region_pixelpin
+entity_type: user
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

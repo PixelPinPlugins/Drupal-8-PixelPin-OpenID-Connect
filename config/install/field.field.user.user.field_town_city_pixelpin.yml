@@ -1,0 +1,22 @@
+uuid: 94d1e2d5-79b8-49d1-81ec-fddde6497aad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_town_city_pixelpin
+  module:
+    - user
+_core:
+  default_config_hash: 9iADbFMgCRKJPLSFk8e_CR0hlt-8eU6kidYTelmMm_s
+id: user.user.field_town_city_pixelpin
+field_name: field_town_city_pixelpin
+entity_type: user
+bundle: user
+label: 'Town/City'
+description: 'The town/city of your current residence'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

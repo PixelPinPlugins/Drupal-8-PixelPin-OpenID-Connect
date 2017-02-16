@@ -1,0 +1,22 @@
+uuid: 9069376d-bb5a-426e-ba3a-107c4bcf8b55
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_gender_pixelpin
+  module:
+    - user
+_core:
+  default_config_hash: hKk0t5DrCWXBWNKpqRNWuJiUnedP9ylVpiTazyCyJZs
+id: user.user.field_gender_pixelpin
+field_name: field_gender_pixelpin
+entity_type: user
+bundle: user
+label: Gender
+description: 'Your gender.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

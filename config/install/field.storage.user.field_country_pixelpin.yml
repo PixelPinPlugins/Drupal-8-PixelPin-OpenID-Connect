@@ -1,0 +1,23 @@
+uuid: 0b98bbc8-07b5-47e1-94d9-68a3dab37600
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: _4jxR7u5fLirPiTXTp7b3hY9QbxZs8dw8ix3y4tNWDU
+id: user.field_country_pixelpin
+field_name: field_country_pixelpin
+entity_type: user
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

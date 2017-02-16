@@ -1,0 +1,84 @@
+# Schema for the configuration files of the OpenID Connect module.
+
+pixelpin_openid_connect.settings:
+  type: config_object
+  label: 'PixelPin OpenID Connect settings'
+  mapping:
+    always_save_userinfo:
+      type: boolean
+      label: 'Save user claims on every login'
+    userinfo_mappings:
+      type: mapping
+      label: 'OpenID Connect settings'
+      mapping:
+        timezone:
+          type: string
+          label: 'Timezone'
+        picture:
+          type: string
+          label: 'Picture'
+        name:
+          type: string
+          label: 'Name'
+        family_name: 
+          type: string
+          label: 'Family Name'
+        given_name:
+          type: string
+          label: 'Given Name'
+        nickname:
+          type: string
+          label: 'Nickname'
+        preferred_username:
+          type: string
+          label: 'Preferred Username' 
+        gender:
+          type: string
+          label: 'Gender'
+        birthdate:
+          type: string
+          label: 'Birthdate'
+        email:
+          type: string
+          label: 'Email'
+        email_verified:
+          type: string
+          label: 'Email Verified'
+        phone_number:
+          type: string
+          label: 'Phone Number' 
+        address:
+          type: string
+          label: 'Address'
+        street_address:
+          type: string
+          label: 'Street Address'
+        town_city:
+          type: string
+          label: 'Town/City'
+        region:
+          type: string
+          label: 'Region'
+        postal_code:
+          type: string
+          label: 'Postal Code'
+        country:
+          type: string
+          label: 'Country'
+
+pixelpin_openid_connect.settings.enable:
+  type: config_object
+  label: 'OpenID Connect PixelPin settings'
+  mapping:
+    enabled:
+      type: boolean
+      label: 'Enable client'
+    settings:
+      type: mapping
+      mapping:
+        client_id:
+          type: string
+          label: 'Client ID'
+        client_secret:
+          type: string
+          label: 'Client secret'

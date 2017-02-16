@@ -1,0 +1,22 @@
+always_save_userinfo: true
+clients_enabled: 
+userinfo_mappings:
+  timezone: zoneinfo
+  name: name
+  field_family_name_pixelpin: family_name
+  field_given_name_pixelpin: given_name
+  field_nickname_pixelpin: nickname
+  field_preferred_username_pixelpin: preferred_username
+  field_gender_pixelpin: gender
+  field_birthdate_pixelpin: birthdate
+  field_email_pixelpin: email
+  field_email_verified_pixelpin: email_verified
+  field_phone_number_pixelpin: phone_number
+  field_phone_number_verified_pixelpin: phone_number_verified
+  field_address_pixelpin: address
+  field_street_address_pixelpin: street_address
+  field_town_city_pixelpin: town_city
+  field_region_pixelpin: region
+  field_postal_code_pixelpin: postal_code
+  field_country_pixelpin: country
+

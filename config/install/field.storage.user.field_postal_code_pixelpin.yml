@@ -1,0 +1,23 @@
+uuid: 135048a7-6c54-4eb5-b14e-aa7ab79e7425
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: vtNDERECqtsx7P-tp0_rcpSqi6uIQ7nYj1d8mMAskYc
+id: user.field_postal_code_pixelpin
+field_name: field_postal_code_pixelpin
+entity_type: user
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

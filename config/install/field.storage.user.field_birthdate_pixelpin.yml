@@ -1,0 +1,23 @@
+uuid: beba0987-c8bd-44a0-bfa8-14931d1db4db
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: fY6fTZtFZ3jfyfvWXMvJ4gNhD4CQHn5H40o3vdtWSNw
+id: user.field_birthdate_pixelpin
+field_name: field_birthdate_pixelpin
+entity_type: user
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

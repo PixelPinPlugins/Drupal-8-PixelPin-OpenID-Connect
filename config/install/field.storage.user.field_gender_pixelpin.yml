@@ -1,0 +1,23 @@
+uuid: 43ce1e80-65df-458b-879c-20d057f4d927
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: HdOnTyuvm60VfuN7TXLEle1n6Np0num_M_tBAvWHJx0
+id: user.field_gender_pixelpin
+field_name: field_gender_pixelpin
+entity_type: user
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

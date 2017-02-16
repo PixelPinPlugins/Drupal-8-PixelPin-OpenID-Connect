@@ -1,0 +1,22 @@
+uuid: 44537aac-5380-4f9c-862e-acdf347f490e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_birthdate_pixelpin
+  module:
+    - user
+_core:
+  default_config_hash: kNJf7EoPnhoPKVRcKkJ-ZHW27qUze19P_RsVqwP2gG0
+id: user.user.field_birthdate_pixelpin
+field_name: field_birthdate_pixelpin
+entity_type: user
+bundle: user
+label: Birthdate
+description: 'Your birthdate'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

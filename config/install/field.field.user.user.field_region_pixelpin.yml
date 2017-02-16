@@ -1,0 +1,22 @@
+uuid: 1061289c-f690-43fc-a8cb-62a78fae2def
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_region_pixelpin
+  module:
+    - user
+_core:
+  default_config_hash: X8mNtKnTdW8GfF5zhrCE9q6Wxh0VfNVsOZnq6VRV_sQ
+id: user.user.field_region_pixelpin
+field_name: field_region_pixelpin
+entity_type: user
+bundle: user
+label: Region
+description: 'The county/state of your current residence'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

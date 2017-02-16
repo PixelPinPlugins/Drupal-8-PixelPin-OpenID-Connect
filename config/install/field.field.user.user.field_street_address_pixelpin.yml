@@ -1,0 +1,22 @@
+uuid: dc86a055-1bee-49e7-8efc-15f78f8c485f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_street_address_pixelpin
+  module:
+    - user
+_core:
+  default_config_hash: Ic4ghrSewDpH7dgpp1yvu543jwBpz6GmHWw4R10MXSM
+id: user.user.field_street_address_pixelpin
+field_name: field_street_address_pixelpin
+entity_type: user
+bundle: user
+label: 'Street Address'
+description: 'The street address of your current residence'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

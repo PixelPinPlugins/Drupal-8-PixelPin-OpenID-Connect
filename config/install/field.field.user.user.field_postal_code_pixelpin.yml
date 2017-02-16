@@ -1,0 +1,22 @@
+uuid: 4670e1b9-c122-4f1e-b2fa-b57e81762ca3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_postal_code_pixelpin
+  module:
+    - user
+_core:
+  default_config_hash: 7u6GcbAMVjisAiWN1vofpYCuwAwqogUQB6peyFoLKqg
+id: user.user.field_postal_code_pixelpin
+field_name: field_postal_code_pixelpin
+entity_type: user
+bundle: user
+label: 'Postal Code'
+description: 'Your postal/zip code of your current residence.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

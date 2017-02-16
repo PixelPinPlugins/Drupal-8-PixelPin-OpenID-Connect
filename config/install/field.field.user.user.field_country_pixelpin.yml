@@ -1,0 +1,22 @@
+uuid: 6fc4e54c-72e9-49bc-b25a-446f67cf4119
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_country_pixelpin
+  module:
+    - user
+_core:
+  default_config_hash: ORFVuc9AoGaGit8BcASGyFoAL2STHH-AhQC1K5VTsEY
+id: user.user.field_country_pixelpin
+field_name: field_country_pixelpin
+entity_type: user
+bundle: user
+label: Country
+description: 'The country of your current residence.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,23 @@
+uuid: 505590ad-9dc9-44b8-807c-e21e02294e70
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: C1s1eMPCDO0Qwx694m15gQ19CeT59pwlp34Zi0jFaLw
+id: user.field_phone_number_pixelpin
+field_name: field_phone_number_pixelpin
+entity_type: user
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
