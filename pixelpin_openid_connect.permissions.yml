@@ -4,7 +4,7 @@ administer openid connect clients:
 
 manage own openid connect accounts:
   title: 'Manage own connected accounts'
-  restrict access: TRUE
+  restrict access: FALSE
 
 openid connect set own password:
   title: 'Set a password for local authentication'

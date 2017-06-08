@@ -2,7 +2,7 @@ pixelpin_openid_connect.admin_settings:
   path: 'admin/config/services/openid-connect'
   defaults:
     _form: '\Drupal\pixelpin_openid_connect\Form\SettingsForm'
-    _title: 'OpenID Connect'
+    _title: 'PixelPin OpenID Connect'
   requirements:
     _permission: 'administer openid connect clients'
 

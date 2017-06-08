@@ -138,10 +138,17 @@ class AccountsForm extends FormBase implements ContainerInjectionInterface {
         continue;
       }
 
+      $form['#attached'] = array(
+            'library' => array(
+              'pixelpin_openid_connect/pixelpin_logo',
+          ),
+      );
+
       $form[$client['id']] = array(
         '#type' => 'fieldset',
-        '#title' => t('Provider: @title', array('@title' => $client['label'])),
+        '#title' => t('Provider: PixelPin', array('@title' => $client['label'])),
       );
+
       $fieldset = &$form[$client['id']];
       $connected = isset($connected_accounts[$client['id']]);
       $fieldset['status'] = array(
@@ -153,18 +160,36 @@ class AccountsForm extends FormBase implements ContainerInjectionInterface {
         $fieldset['status']['#markup'] = t('Connected as %sub', array(
           '%sub' => $connected_accounts[$client['id']],
         ));
+
         $fieldset['pixelpin_openid_connect_client_' . $client['id'] . '_disconnect'] = array(
+            '#type' => 'inline_template',
+            '#template' => '<div><button data-drupal-selector="edit-pixelpin-openid-connect-client-enable-disconnect" class="button js-form-submit form-submit" id="edit-pixelpin-openid-connect-client-enable-disconnect" name="disconnect__enable" type="submit"><svg class="icon icon-pixelpin-connect" value="{{value}}"><use xlink:href="#icon-pixelpin-connect"></use></svg> Disconnect From PixelPin</button></div>',
+            '#context' => [
+              'value' => t('Disconnect From PixelPin', array('@client_title' => $client['label'])),
+            ],
+          );
+
+        $fieldset['pixelpin_openid_connect_client_' . $client['id'] . '_disconnect_hidden'] = array(
           '#type' => 'submit',
-          '#value' => t('Disconnect from @client_title', array('@client_title' => $client['label'])),
+          '#value' => t('Disconnect from PixelPin', array('@client_title' => $client['label'])),
           '#name' => 'disconnect__' . $client['id'],
           '#access' => !$read_only,
         );
       }
       else {
         $fieldset['status']['#markup'] = t('Not connected');
-        $fieldset['pixelpin_openid_connect_client_' . $client['id'] . '_connect'] = array(
+
+        $fieldset['pixelpin_openid_connect_client_' . $client_id . '_connect'] = array(
+            '#type' => 'inline_template',
+            '#template' => '<div><button data-drupal-selector="edit-pixelpin-openid-connect-client-enable-connect" class="button js-form-submit form-submit" id="edit-pixelpin-openid-connect-client-enable-connect" name="connect__enable" type="submit"><svg class="icon icon-pixelpin-connect" value="{{value}}"><use xlink:href="#icon-pixelpin-connect"></use></svg> Connect With PixelPin</button></div>',
+            '#context' => [
+              'value' => t('Connect With PixelPin', array('@client_title' => $client['label'])),
+            ],
+        );
+
+        $fieldset['pixelpin_openid_connect_client_' . $client['id'] . '_connect_hidden'] = array(
           '#type' => 'submit',
-          '#value' => t('Connect with @client_title', array('@client_title' => $client['label'])),
+          '#value' => t('Connect with PixelPin', array('@client_title' => $client['label'])),
           '#name' => 'connect__' . $client['id'],
           '#access' => !$read_only,
         );
@@ -182,7 +207,7 @@ class AccountsForm extends FormBase implements ContainerInjectionInterface {
     if ($op === 'disconnect') {
       $this->authmap->deleteAssociation($form_state->get('account')->id(), $client_name);
       $client = $this->pluginManager->getDefinition($client_name);
-      drupal_set_message(t('Account successfully disconnected from @client.', array('@client' => $client['label'])));
+      drupal_set_message(t('Account successfully disconnected from PixelPin.', array('@client' => $client['label'])));
       return;
     }
 
@@ -220,10 +245,10 @@ class AccountsForm extends FormBase implements ContainerInjectionInterface {
       return AccessResult::allowed();
     }
 
-    if ($this->currentUser->id() && $this->currentUser->id() === $user->id() &&
-      $this->currentUser->hasPermission('manage own openid connect accounts')) {
+    if ($this->currentUser->id() && $this->currentUser->id() === $user->id()) {
       return AccessResult::allowed();
     }
+
     return AccessResult::forbidden();
   }
 

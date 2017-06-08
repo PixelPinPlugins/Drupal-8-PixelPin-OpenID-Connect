@@ -74,26 +74,37 @@ class LoginForm extends FormBase implements ContainerInjectionInterface {
         if (!$this->config('pixelpin_openid_connect.settings.enable')
           ->get('enabled')) {
           continue;
-        }                   
-          $url = \Drupal::service('path.current')->getPath();
+        }                
+          $form['#attached'] = array(
+            'library' => array(
+              'pixelpin_openid_connect/pixelpin_logo',
+            ),
+          );
 
-          $find = 'login';
+          $value = 'Log in Using PixelPin';
 
-          $pos = strpos($url, $find);
-
-          if ($pos === false){
-                $value = 'Register Using PixelPin';
-                $label = 'PixelPin OpenID Connect Register';
-            } else {
-                $value = 'Log in with PixelPin';
-                $label = 'PixelPin OpenID Connect Login';
-            } 
-          $form['pixelpin_openid_connect_client_' . $client_id . '_login_title'] = array(
-            '#type' => 'item',
-            '#title' => t($label),
-          );  
+          $form['pixelpin_openid_connect_text'] = array(
+            '#type' => 'inline_template',
+            '#template' => '<div><p>If you already registered with PixelPin, you can use your PixelPin picture to login to our site.</p></div>',
+          );
 
           $form['pixelpin_openid_connect_client_' . $client_id . '_login'] = array(
+            '#type' => 'inline_template',
+            '#template' => '<div><button data-drupal-selector="edit-pixelpin-openid-connect-client-enable-login" class="button js-form-submit form-submit" id="edit-pixelpin-openid-connect-client-enable-login" name="enable" type="submit"><svg class="icon icon-pixelpin-connect" value="{{value}}"><use xlink:href="#icon-pixelpin-connect"></use></svg> {{text}}</button></div>',
+            '#context' => [
+              'text' => $value,
+              'value' => t($value, array(
+              '@client_title' => $client['label'],
+            )),
+            ],
+          );
+
+          $form['pixelpin_openid_connect_link'] = array(
+            '#type' => 'inline_template',
+            '#template' => '<div><a href="https://www.pixelpin.co.uk" target="_blank">What is PixelPin?</a></div>',
+          );
+
+          $form['pixelpin_openid_connect_client_' . $client_id . '_login_hide'] = array(
             '#type' => 'submit',
             '#value' => t($value, array(
               '@client_title' => $client['label'],
@@ -101,7 +112,7 @@ class LoginForm extends FormBase implements ContainerInjectionInterface {
             '#name' => $client_id,
             '#prefix' => '<div>',
             '#suffix' => '</div>',
-          );      
+          );
     }
     return $form;
   }

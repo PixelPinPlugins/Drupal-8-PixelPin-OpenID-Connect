@@ -1,0 +1,56 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+#edit-pixelpin-openid-connect-client-enable-login-hide {
+	display:none;
+}
+
+#edit-pixelpin-openid-connect-client-enable-connect-hidden {
+	display:none;
+}
+
+#edit-pixelpin-openid-connect-client-enable-disconnect-hidden {
+	display:none;
+}
+
+#edit-pixelpin-openid-connect-client-enable-login {
+	background-color: #000;
+	background-image: linear-gradient(to bottom, #5d5d5d, #000000);
+	border: 1px solid #000000;
+	border-bottom-color: #000000;
+	border-left-color: #000000;
+	border-right-color: #000000;
+	color: #ffffff;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#edit-pixelpin-openid-connect-client-enable-connect {
+	background-color: #000;
+	background-image: linear-gradient(to bottom, #5d5d5d, #000000);
+	border: 1px solid #000000;
+	border-bottom-color: #000000;
+	border-left-color: #000000;
+	border-right-color: #000000;
+	color: #ffffff;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#edit-pixelpin-openid-connect-client-enable-disconnect {
+	background-color: #000;
+	background-image: linear-gradient(to bottom, #5d5d5d, #000000);
+	border: 1px solid #000000;
+	border-bottom-color: #000000;
+	border-left-color: #000000;
+	border-right-color: #000000;
+	color: #ffffff;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}

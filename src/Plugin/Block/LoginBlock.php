@@ -13,7 +13,7 @@ use Drupal\pixelpin_openid_connect\Plugin\OpenIDConnectClientManager;
  *
  * @Block(
  *  id = "pixelpin_openid_connect_login",
- *  admin_label = @Translation("OpenID Connect login"),
+ *  admin_label = @Translation("Log In Using PixelPin"),
  * )
  */
 class LoginBlock extends BlockBase implements ContainerFactoryPluginInterface {
