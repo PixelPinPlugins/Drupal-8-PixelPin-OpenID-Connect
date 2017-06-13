@@ -8,7 +8,6 @@ use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 use Drupal\pixelpin_openid_connect\Claims;
 use Drupal\pixelpin_openid_connect\Plugin\OpenIDConnectClientManager;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-//use Drupal\pixelpin_openid_connect\src\Form\SettingsForm;
 
 /**
  * Class LoginForm.
