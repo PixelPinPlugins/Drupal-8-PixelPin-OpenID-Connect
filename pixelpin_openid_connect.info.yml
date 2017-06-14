@@ -9,5 +9,5 @@ configure: pixelpin_openid_connect.admin_settings
 # Information added by Drupal.org packaging script on 2016-11-02
 version: '8.x-1.0'
 core: '8.x'
-project: 'pixelpin_pixelpin_openid_connect'
+project: 'pixelpin_openid_connect'
 datestamp: 1478106164

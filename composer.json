@@ -8,7 +8,7 @@
   "minimum-stability": "dev",
   "support": {
     "issues": "https://www.drupal.org/project/issues/pixelpin_openid_connect",
-    "source": "http://cgit.drupalcode.org/pixelpin_openid_connect"
+    "source": "https://github.com/PixelPinPlugins/pixelpin-openid-connect-8"
   },
   "require": { }
 }
